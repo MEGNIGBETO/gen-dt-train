@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}Compte {{ user.username }}{% endblock %}
+
+{% block content %}
+<!-- Espace count -->
+<div class="container mt-4">
+    <div class="profile-header">
+        <img src="{{ user.profile_picture }}" alt="Photo de Profil">
+        <h2>{{ user.name }}</h2>
+        <p><strong>Rôle :</strong> {{ user.role }}</p>
+    </div>
+
+    <div class="section">
+        <h3>Informations Personnelles</h3>
+        <p><strong>Email :</strong> {{ user.email }}</p>
+        <p><strong>Téléphone :</strong> {{ user.phone }}</p>
+        <p><strong>Adresse :</strong> {{ user.address }}</p>
+        <p><strong>Date de Naissance :</strong> {{ user.birth_date }}</p>
+        <p><strong>Langue Préférée :</strong> {{ user.language_preference }}</p>
+        <p><strong>Confidentialité :</strong> {{ user.privacy_settings }}</p>
+    </div>
+
+    <div class="section">
+        <h3>Informations Académiques</h3>
+        <p><strong>Niveau d'Études :</strong> {{ user.education_level }}</p>
+        <p><strong>Cours Suivis :</strong> {{ user.courses }}</p>
+        <p><strong>Certifications :</strong> {{ user.certifications }}</p>
+    </div>
+
+    <div class="section">
+        <h3>Activité Récente</h3>
+        <p><strong>Dernière Connexion :</strong> {{ user.last_login }}</p>
+        <p><strong>Temps Total Passé :</strong> {{ user.total_time_spent }} heures</p>
+        <p><strong>Participation :</strong> {{ user.activity_participation }}</p>
+    </div>
+
+    <div class="section">
+        <h3>Interactions et Groupes</h3>
+        <p><strong>Interactions :</strong> {{ user.interactions }}</p>
+        <p><strong>Groupes de Travail :</strong> {{ user.groups }}</p>
+        <p><strong>Messages :</strong> {{ user.messages }}</p>
+    </div>
+
+    <div class="section">
+        <h3>Statistiques et Performances</h3>
+        <p><strong>Performance :</strong> {{ user.performance }}</p>
+        <p><strong>Badges :</strong> {{ user.badges }}</p>
+        <p><strong>Feedback :</strong> {{ user.feedback }}</p>
+    </div>
+
+    <div class="section">
+        <h3>Paramètres et Préférences</h3>
+        <p><strong>Notifications :</strong> {{ user.notifications }}</p>
+        <p><strong>Personnalisation :</strong> {{ user.theme }}</p>
+        <p><strong>Réinitialiser Mot de Passe :</strong> <a href="/reset_password">Réinitialiser</a></p>
+    </div>
+</div>
+{% endblock %}

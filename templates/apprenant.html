@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}Compte {{ utilisateur.username }}{% endblock %}
+
+{% block content %}
+<!-- Espace count -->
+<div class="container mt-4">
+    <div id="account">
+        <h2>Profil de {{ utilisateur.username }}</h2>
+        <p>Email : {{ utilisateur.email }}</p>
+        <a href="{{ url_for('home') }}">Retour à la page d'accueil</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+body {
+    padding-top: 56px;
+}
+.card {
+    margin-top: 20px;
+}
+
+
+/*Profil apprenant*/
+.profile-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+.profile-header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.section h3 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
